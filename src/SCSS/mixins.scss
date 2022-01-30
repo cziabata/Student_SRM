@@ -1,0 +1,9 @@
+@mixin squareSize_mixin(){
+    width: 32px;
+    height: 32px;
+}
+@mixin dropdownArrow_mixin(){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

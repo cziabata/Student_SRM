@@ -1,0 +1,23 @@
+@import "../../SCSS/mixins.scss";
+@import "../../SCSS/variables.scss";
+
+.headerNavBar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.dropdown{
+    border: none;
+    color: $headers_grey;
+}
+.loginWrapp{
+    display: flex;
+    cursor: pointer;
+}
+.loginPhoto{
+    @include squareSize_mixin();
+}
+.dropdown_arrow{
+    @include dropdownArrow_mixin();
+    @include squareSize_mixin();
+}
