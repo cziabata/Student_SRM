@@ -7,3 +7,9 @@
     justify-content: center;
     align-items: center;
 }
+@mixin defaultLink_mixin($color){
+    color: $color;
+    font-size: 14px;
+    text-decoration: none;
+    transition: .2s;
+}

@@ -6,9 +6,18 @@
     justify-content: space-around;
     align-items: center;
 }
+.headerNavLink{
+    padding: 6px 12px;
+    @include defaultLink_mixin($headers_grey);
+    &:hover{
+        color: white;
+        background: $hover_red;
+    }
+}
 .dropdown{
     border: none;
     color: $headers_grey;
+    cursor: pointer;
 }
 .loginWrapp{
     display: flex;
