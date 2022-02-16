@@ -1,40 +1,67 @@
 import React from "react";
 import {NavLink} from "react-router-dom";
 import styles from "./Header.module.scss";
+
+//import images / icons
 import user_photo from "../../IMG/user_photo.jpg";
 import dropdown_arrow from "../../IMG/dropdown_arrow.svg";
+import close_icon from "../../IMG/close_icon.svg";
 
 const Header = () => {
-    return(
+    return( 
         <header>
-            <div className={styles.headerNavBar}>
+            <nav className={styles.headerNavBar}>
                 <div>
-                    <select className={styles.dropdown} name="Organization">
-                        <option value="school_1">SCHOOL 1</option>
-                        <option value="school_2">SCHOOL 2</option>
+                    <select name="Organization">
+                        <option value="SCHOOL_1">SCHOOL 1</option>
+                        <option value="SCHOOL_2">SCHOOL 2</option>
                     </select>
                 </div>
                 <div>
-                    <NavLink className={styles.headerNavLink} to="#">ANALYTICS</NavLink>
+                    <NavLink to="#">ANALYTICS</NavLink>
                 </div>
                 <div>
-                    <NavLink className={styles.headerNavLink} to="#">GRADEBOOKS</NavLink>
+                    <NavLink to="#">GRADEBOOKS</NavLink>
                 </div>
                 <div>
-                    <NavLink className={styles.headerNavLink} to="#">TESTS</NavLink>
+                    <NavLink to="#">TESTS</NavLink>
                 </div>
                 <div>
-                    <NavLink className={styles.headerNavLink} to="#">STUDENTS</NavLink>
+                    <NavLink to="#">STUDENTS</NavLink>
                 </div>
                 <div>
-                    <NavLink className={styles.headerNavLink} to="#">TEACHERS</NavLink>
+                    <NavLink to="#">TEACHERS</NavLink>
                 </div>
                 <div>
-                    <NavLink className={styles.headerNavLink} to="#">ARCHIVE</NavLink>
+                    <NavLink to="#">ARCHIVE</NavLink>
                 </div>
-                <div className={styles.loginWrapp}>
+                <div className={styles.dropdownWrap}>
                     <div className={styles.loginPhoto}><img src={user_photo} alt="user_photo"/></div>
-                    <div className={styles.dropdown_arrow}><img src={dropdown_arrow} alt="dropdown_menu"/></div>
+                    <div className={styles.dropdown_arrow}><img src={dropdown_arrow} alt="dropdown menu arrow"/></div>
+                </div>
+            </nav>
+            <div className={styles.headerSelectBar}>
+                <select name="SHOW ALL">
+                    <option value="SHOW_ALL">SHOW ALL</option>
+                </select>
+                <select name="ALL GRADES">
+                    <option value="ALL_GRADES">ALL GRADES</option>
+                </select>
+                <select name="ALL CLASSES">
+                    <option value="ALL_CLASSES">ALL CLASSES</option>
+                </select>
+                <select name="AV.SCORE">
+                        <option value="AV.SCORE">AV.SCORE</option>
+                </select>
+                <select name="AV.SPEED">
+                        <option value="AV.SPEED">AV.SPEED</option>
+                </select>
+                <select name="ALL CLASSES">
+                    <option value="ALL_CLASSES">ALL CLASSES</option>
+                </select>
+                <div>
+                    <div><img src={close_icon} alt="close_icon"/></div>
+                    <div><span>CLEAR ALL</span></div>
                 </div>
             </div>
         </header>

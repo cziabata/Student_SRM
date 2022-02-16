@@ -1,32 +1,41 @@
 @import "../../SCSS/mixins.scss";
 @import "../../SCSS/variables.scss";
 
-.headerNavBar{
+.headerNavBar {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    padding: 14px 0;
 }
-.headerNavLink{
+.headerNavBar select {
+    @include dropdown_mixin(14px, $mid_grey)
+}
+.headerNavBar a {
     padding: 6px 12px;
-    @include defaultLink_mixin($headers_grey);
+    @include defaultLinkStyles_mixin($mid_grey);
     &:hover{
         color: white;
         background: $hover_red;
     }
 }
-.dropdown{
-    border: none;
-    color: $headers_grey;
-    cursor: pointer;
-}
-.loginWrapp{
+.dropdownWrap {
     display: flex;
     cursor: pointer;
 }
 .loginPhoto{
     @include squareSize_mixin();
 }
-.dropdown_arrow{
+.dropdown_arrow {
     @include dropdownArrow_mixin();
     @include squareSize_mixin();
+}
+.headerSelectBar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: $dark_grey;
+}
+.headerSelectBar select {
+    @include dropdown_mixin(12px, $light_grey);
+    background: $dark_grey;
 }
