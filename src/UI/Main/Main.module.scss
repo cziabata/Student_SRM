@@ -1,0 +1,42 @@
+@import "../../SCSS/mixins.scss";
+@import "../../SCSS/variables.scss";
+
+.tools_flexWrap {
+    @include flexSpaceAroundCenter_mixin();
+    padding: 8px 0;
+}
+.tools_title h2 {
+    font-size: 20px;
+    color: $dark_grey;
+}
+.tools_form {
+    display: flex;
+}
+.tools_searchInput {
+    padding: 0 0 0 5px;
+    width: 30vw;
+    height: 32px;
+    border: none;
+    background-color: $ultra_light_gray;
+}
+.tools_searchButton {
+    @include iconSize_32_mixin();
+    background-color: $ultra_light_gray;
+    &:hover {
+        background-color: $mid_grey;
+    }
+}
+.tools_csvButton {
+    @include flexCenter_mixin();
+    height: 32px;
+    background-color: white;
+    color: $light_grey;
+    & img {
+        @include iconSize_16_mixin();
+        margin-right: 6px;
+    }
+    &:hover {
+        background-color: $ultra_light_gray;
+        color: $dark_grey;
+    }
+}
